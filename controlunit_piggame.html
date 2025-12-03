@@ -1,0 +1,1407 @@
+
+<style>
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#descriptions{
+  margin-left:5.5%;
+  margin-right:3%;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body th {
+    background-color: #ffd78c;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.markdown-body .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.markdown-body .pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.markdown-body .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.markdown-body .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.markdown-body .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.markdown-body .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+}
+
+.markdown-body .my-2 {
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  width:100%;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #6a737d;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.markdown-body .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.markdown-body .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body .description {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>TerosHDL</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+  </style>
+  </head>
+  <body>
+  <article class="markdown-body">
+
+<div id="teroshdl" class='templateTerosHDL'>
+<h1 id="entity-controlunit">Entity: controlunit</h1><ul>
+<li><strong>File</strong>: controlunit_piggame.vhd</li>
+</ul><h2 id="diagram">Diagram</h2><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 495 230"><svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow:hidden;top:-100%;left:-100%;position:absolute;opacity:0"><polyline id="SvgjsPolyline1003" points="135,0 150,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><rect id="SvgjsRect1006" width="210" height="210" fill="black" x="150" y="15"></rect><rect id="SvgjsRect1007" width="206" height="205" fill="#fdfd96" x="152" y="17"></rect><text id="SvgjsText1008" font-family="Helvetica" x="130" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1009" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1010" font-family="Helvetica" x="165" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1011" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   clock </tspan></text><line id="SvgjsLine1012" x1="135" y1="30" x2="150" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1013" font-family="Helvetica" x="130" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1014" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1015" font-family="Helvetica" x="165" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1016" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   reset </tspan></text><line id="SvgjsLine1017" x1="135" y1="50" x2="150" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1018" font-family="Helvetica" x="130" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1019" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1020" font-family="Helvetica" x="165" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1021" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   ROLL </tspan></text><line id="SvgjsLine1022" x1="135" y1="70" x2="150" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1023" font-family="Helvetica" x="130" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1024" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1025" font-family="Helvetica" x="165" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1026" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   HOLD </tspan></text><line id="SvgjsLine1027" x1="135" y1="90" x2="150" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1028" font-family="Helvetica" x="130" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1029" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1030" font-family="Helvetica" x="165" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1031" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   NEWGAME </tspan></text><line id="SvgjsLine1032" x1="135" y1="110" x2="150" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1033" font-family="Helvetica" x="130" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1034" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1035" font-family="Helvetica" x="165" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1036" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   DIE1 </tspan></text><line id="SvgjsLine1037" x1="135" y1="130" x2="150" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1038" font-family="Helvetica" x="130" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1039" dy="26" x="130" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1040" font-family="Helvetica" x="165" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1041" dy="26" x="165" svgjs:data="{&quot;newLined&quot;:true}">   WN </tspan></text><line id="SvgjsLine1042" x1="135" y1="150" x2="150" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1043" font-family="Helvetica" x="380" y="9.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1044" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1045" font-family="Helvetica" x="345" y="9.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1046" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   ENADIE </tspan></text><line id="SvgjsLine1047" x1="360" y1="30" x2="375" y2="30" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1048" font-family="Helvetica" x="380" y="29.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1049" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1050" font-family="Helvetica" x="345" y="29.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1051" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   LDSU </tspan></text><line id="SvgjsLine1052" x1="360" y1="50" x2="375" y2="50" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1053" font-family="Helvetica" x="380" y="49.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1054" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1055" font-family="Helvetica" x="345" y="49.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1056" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   LDT1 </tspan></text><line id="SvgjsLine1057" x1="360" y1="70" x2="375" y2="70" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1058" font-family="Helvetica" x="380" y="69.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1059" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1060" font-family="Helvetica" x="345" y="69.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1061" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   LDT2 </tspan></text><line id="SvgjsLine1062" x1="360" y1="90" x2="375" y2="90" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1063" font-family="Helvetica" x="380" y="89.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1064" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1065" font-family="Helvetica" x="345" y="89.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1066" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   RSSU </tspan></text><line id="SvgjsLine1067" x1="360" y1="110" x2="375" y2="110" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1068" font-family="Helvetica" x="380" y="109.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1069" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1070" font-family="Helvetica" x="345" y="109.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1071" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   RST1 </tspan></text><line id="SvgjsLine1072" x1="360" y1="130" x2="375" y2="130" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1073" font-family="Helvetica" x="380" y="129.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1074" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1075" font-family="Helvetica" x="345" y="129.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1076" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   RST2 </tspan></text><line id="SvgjsLine1077" x1="360" y1="150" x2="375" y2="150" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1078" font-family="Helvetica" x="380" y="149.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1079" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1080" font-family="Helvetica" x="345" y="149.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1081" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   BP1 </tspan></text><line id="SvgjsLine1082" x1="360" y1="170" x2="375" y2="170" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1083" font-family="Helvetica" x="380" y="169.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1084" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1085" font-family="Helvetica" x="345" y="169.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1086" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   CP </tspan></text><line id="SvgjsLine1087" x1="360" y1="190" x2="375" y2="190" stroke-linecap="rec" stroke="black" stroke-width="5"></line><text id="SvgjsText1088" font-family="Helvetica" x="380" y="189.3015625" font-size="20" text-anchor="start" family="Helvetica" size="20" anchor="start" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1089" dy="26" x="380" svgjs:data="{&quot;newLined&quot;:true}">   std_logic </tspan></text><text id="SvgjsText1090" font-family="Helvetica" x="345" y="189.3015625" font-size="20" text-anchor="end" family="Helvetica" size="20" anchor="end" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan id="SvgjsTspan1091" dy="26" x="345" svgjs:data="{&quot;newLined&quot;:true}">   FP </tspan></text><line id="SvgjsLine1092" x1="360" y1="210" x2="375" y2="210" stroke-linecap="rec" stroke="black" stroke-width="5"></line></svg>
+<h2 id="ports">Ports</h2>
+<table>
+<thead>
+<tr>
+<th id="port_name">Port name</th>
+<th id="direction">Direction</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clock</td>
+<td>in</td>
+<td>std_logic</td>
+<td>Clock</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>in</td>
+<td>std_logic</td>
+<td>Reset</td>
+</tr>
+<tr>
+<td>ROLL</td>
+<td>in</td>
+<td>std_logic</td>
+<td>button for the roll</td>
+</tr>
+<tr>
+<td>HOLD</td>
+<td>in</td>
+<td>std_logic</td>
+<td>button for hold</td>
+</tr>
+<tr>
+<td>NEWGAME</td>
+<td>in</td>
+<td>std_logic</td>
+<td>button for new game</td>
+</tr>
+<tr>
+<td>ENADIE</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Enable Die to increment</td>
+</tr>
+<tr>
+<td>LDSU</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Add DIE to SUR register</td>
+</tr>
+<tr>
+<td>LDT1</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Add SUR to TR1 register</td>
+</tr>
+<tr>
+<td>LDT2</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Add SUR to TR2 register</td>
+</tr>
+<tr>
+<td>RSSU</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Reset SUR register</td>
+</tr>
+<tr>
+<td>RST1</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Reset TR1 register</td>
+</tr>
+<tr>
+<td>RST2</td>
+<td>out</td>
+<td>std_logic</td>
+<td>Reset TR2 register</td>
+</tr>
+<tr>
+<td>BP1</td>
+<td>out</td>
+<td>std_logic</td>
+<td>enables blinking</td>
+</tr>
+<tr>
+<td>CP</td>
+<td>inout</td>
+<td>std_logic</td>
+<td>current player (register outside)</td>
+</tr>
+<tr>
+<td>FP</td>
+<td>inout</td>
+<td>std_logic</td>
+<td>First player (register outside)</td>
+</tr>
+<tr>
+<td>DIE1</td>
+<td>in</td>
+<td>std_logic</td>
+<td>signal that the die is at one</td>
+</tr>
+<tr>
+<td>WN</td>
+<td>in</td>
+<td>std_logic</td>
+<td>WIN has been achieved by a player</td>
+</tr>
+</tbody>
+</table><h2 id="signals">Signals</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIG_CURRENT_STATE</td>
+<td>PIG_STATE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th id="name">Name</th>
+<th id="type">Type</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIG_STATE</td>
+<td>(INITIAL,<br><span style="padding-left:20px"> BEGINNING,<br><span style="padding-left:20px"> ROLLING,<br><span style="padding-left:20px"> ONE,<br><span style="padding-left:20px"> ROLLHOLD,<br><span style="padding-left:20px"> TEST,<br><span style="padding-left:20px"> WIN)</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2 id="processes">Processes</h2><ul>
+<li>FSM: ( clock )</li>
+</ul><h2 id="statemachines">State machines</h2><div><div id="state_machine"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: state transitions Pages: 1 -->
+<svg width="461pt" height="598pt"
+ viewBox="0.00 0.00 461.00 598.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 594)">
+<title>state transitions</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-594 457,-594 457,4 -4,4"/>
+<g id="clust1" class="cluster state regular">
+<title>cluster_PIG_CURRENT_STATE</title>
+<path fill="none" stroke="#000000" stroke-width="2" d="M20,-8C20,-8 433,-8 433,-8 439,-8 445,-14 445,-20 445,-20 445,-570 445,-570 445,-576 439,-582 433,-582 433,-582 20,-582 20,-582 14,-582 8,-576 8,-570 8,-570 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="start" x="161.3342" y="-563.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">PIG_CURRENT_STATE</text>
+</g>
+<!-- PIG_CURRENT_STATE -->
+<!-- INITIAL -->
+<g id="node2" class="node state regular">
+<title>INITIAL</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="355,-544 293,-544 293,-508 355,-508 355,-544"/>
+<text text-anchor="start" x="303.6642" y="-522.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">INITIAL</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M305.3333,-509C305.3333,-509 342.6667,-509 342.6667,-509 348.3333,-509 354,-514.6667 354,-520.3333 354,-520.3333 354,-531.6667 354,-531.6667 354,-537.3333 348.3333,-543 342.6667,-543 342.6667,-543 305.3333,-543 305.3333,-543 299.6667,-543 294,-537.3333 294,-531.6667 294,-531.6667 294,-520.3333 294,-520.3333 294,-514.6667 299.6667,-509 305.3333,-509"/>
+</g>
+<!-- BEGINNING -->
+<g id="node3" class="node state regular">
+<title>BEGINNING</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="264.5,-462 175.5,-462 175.5,-426 264.5,-426 264.5,-462"/>
+<text text-anchor="start" x="186.8334" y="-440.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">BEGINNING</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M187.8333,-427C187.8333,-427 252.1667,-427 252.1667,-427 257.8333,-427 263.5,-432.6667 263.5,-438.3333 263.5,-438.3333 263.5,-449.6667 263.5,-449.6667 263.5,-455.3333 257.8333,-461 252.1667,-461 252.1667,-461 187.8333,-461 187.8333,-461 182.1667,-461 176.5,-455.3333 176.5,-449.6667 176.5,-449.6667 176.5,-438.3333 176.5,-438.3333 176.5,-432.6667 182.1667,-427 187.8333,-427"/>
+</g>
+<!-- INITIAL&#45;&gt;BEGINNING -->
+<g id="edge1" class="edge transition">
+<title>INITIAL&#45;&gt;BEGINNING</title>
+<path fill="none" stroke="#000000" d="M300.919,-507.8015C286.2427,-496.2298 267.06,-481.105 251.0554,-468.486"/>
+<polygon fill="#000000" stroke="#000000" points="253.0362,-465.5907 243.0165,-462.1476 248.7021,-471.0876 253.0362,-465.5907"/>
+<text text-anchor="middle" x="279.3895" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+</g>
+<!-- ROLLING -->
+<g id="node4" class="node state regular">
+<title>ROLLING</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="120,-380 46,-380 46,-344 120,-344 120,-380"/>
+<text text-anchor="start" x="56.6642" y="-358.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">ROLLING</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M58.3333,-345C58.3333,-345 107.6667,-345 107.6667,-345 113.3333,-345 119,-350.6667 119,-356.3333 119,-356.3333 119,-367.6667 119,-367.6667 119,-373.3333 113.3333,-379 107.6667,-379 107.6667,-379 58.3333,-379 58.3333,-379 52.6667,-379 47,-373.3333 47,-367.6667 47,-367.6667 47,-356.3333 47,-356.3333 47,-350.6667 52.6667,-345 58.3333,-345"/>
+</g>
+<!-- BEGINNING&#45;&gt;ROLLING -->
+<g id="edge2" class="edge transition">
+<title>BEGINNING&#45;&gt;ROLLING</title>
+<path fill="none" stroke="#000000" d="M175.2371,-433.4653C157.6813,-427.9812 137.9953,-420.0533 122.173,-409 114.1155,-403.3711 106.765,-395.6709 100.663,-388.1323"/>
+<polygon fill="#000000" stroke="#000000" points="103.4027,-385.9529 94.5574,-380.121 97.8353,-390.1961 103.4027,-385.9529"/>
+<text text-anchor="start" x="122" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ROLL = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- ONE -->
+<g id="node5" class="node state regular">
+<title>ONE</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="197,-298 141,-298 141,-262 197,-262 197,-298"/>
+<text text-anchor="start" x="155.9998" y="-276.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">ONE</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M153.3333,-263C153.3333,-263 184.6667,-263 184.6667,-263 190.3333,-263 196,-268.6667 196,-274.3333 196,-274.3333 196,-285.6667 196,-285.6667 196,-291.3333 190.3333,-297 184.6667,-297 184.6667,-297 153.3333,-297 153.3333,-297 147.6667,-297 142,-291.3333 142,-285.6667 142,-285.6667 142,-274.3333 142,-274.3333 142,-268.6667 147.6667,-263 153.3333,-263"/>
+</g>
+<!-- ROLLING&#45;&gt;ONE -->
+<g id="edge3" class="edge transition">
+<title>ROLLING&#45;&gt;ONE</title>
+<path fill="none" stroke="#000000" d="M86.141,-343.8258C88.5535,-334.3367 92.7265,-323.0578 99.839,-315 104.6869,-309.5078 117.9207,-302.3566 131.5306,-295.9509"/>
+<polygon fill="#000000" stroke="#000000" points="133.2725,-299.0032 140.9144,-291.6649 130.3642,-292.6359 133.2725,-299.0032"/>
+<text text-anchor="start" x="99" y="-318" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (ROLL = &#39;1&#39;) &#160;&#160;</text>
+</g>
+<!-- ONE&#45;&gt;BEGINNING -->
+<g id="edge4" class="edge transition">
+<title>ONE&#45;&gt;BEGINNING</title>
+<path fill="none" stroke="#000000" d="M174.7224,-298.1615C176.425,-303.5776 178.2917,-309.528 180,-315 190.8566,-349.7768 203.2695,-389.8587 211.3503,-415.9953"/>
+<polygon fill="#000000" stroke="#000000" points="208.0286,-417.101 214.3255,-425.6215 214.7164,-415.0339 208.0286,-417.101"/>
+<text text-anchor="start" x="199" y="-359" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DIE1 =&#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- ROLLHOLD -->
+<g id="node6" class="node state regular">
+<title>ROLLHOLD</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="120,-216 34,-216 34,-180 120,-180 120,-216"/>
+<text text-anchor="start" x="44.6648" y="-194.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">ROLLHOLD</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M46.3333,-181C46.3333,-181 107.6667,-181 107.6667,-181 113.3333,-181 119,-186.6667 119,-192.3333 119,-192.3333 119,-203.6667 119,-203.6667 119,-209.3333 113.3333,-215 107.6667,-215 107.6667,-215 46.3333,-215 46.3333,-215 40.6667,-215 35,-209.3333 35,-203.6667 35,-203.6667 35,-192.3333 35,-192.3333 35,-186.6667 40.6667,-181 46.3333,-181"/>
+</g>
+<!-- ONE&#45;&gt;ROLLHOLD -->
+<g id="edge5" class="edge transition">
+<title>ONE&#45;&gt;ROLLHOLD</title>
+<path fill="none" stroke="#000000" d="M148.5822,-261.8015C135.7184,-250.336 118.941,-235.3822 104.8625,-222.8339"/>
+<polygon fill="#000000" stroke="#000000" points="107.1547,-220.1885 97.3607,-216.1476 102.4971,-225.4141 107.1547,-220.1885"/>
+<text text-anchor="start" x="129" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (DIE1 =&#39;1&#39;) &#160;&#160;</text>
+</g>
+<!-- ROLLHOLD&#45;&gt;ROLLING -->
+<g id="edge7" class="edge transition">
+<title>ROLLHOLD&#45;&gt;ROLLING</title>
+<path fill="none" stroke="#000000" d="M49.0715,-216.2078C42.8203,-222.4661 38,-230.1584 38,-239 38,-321 38,-321 38,-321 38,-326.6808 39.9838,-331.7835 43.1183,-336.3005"/>
+<polygon fill="#000000" stroke="#000000" points="40.5477,-338.6766 49.8232,-343.7968 45.7652,-334.0099 40.5477,-338.6766"/>
+<text text-anchor="start" x="38" y="-283" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ROLL = &#39;1&#39; &#160;&#160;</text>
+<text text-anchor="start" x="38" y="-271" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (HOLD = &#39;1&#39;) &#160;&#160;</text>
+</g>
+<!-- ROLLHOLD&#45;&gt;ROLLHOLD -->
+<g id="edge8" class="edge transition">
+<title>ROLLHOLD&#45;&gt;ROLLHOLD</title>
+<path fill="none" stroke="#000000" d="M120.1303,-202.856C132.4785,-202.6655 142,-201.0469 142,-198 142,-195.8577 137.2927,-194.4214 130.2054,-193.6913"/>
+<polygon fill="#000000" stroke="#000000" points="130.3055,-190.1916 120.1303,-193.144 129.9258,-197.1813 130.3055,-190.1916"/>
+<text text-anchor="start" x="142" y="-201" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (HOLD = &#39;1&#39;) &#160;&#160;</text>
+<text text-anchor="start" x="142" y="-189" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (ROLL = &#39;1&#39;) &#160;&#160;</text>
+</g>
+<!-- TEST -->
+<g id="node7" class="node state regular">
+<title>TEST</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="269,-134 213,-134 213,-98 269,-98 269,-134"/>
+<text text-anchor="start" x="225.6664" y="-112.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">TEST</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M225.3333,-99C225.3333,-99 256.6667,-99 256.6667,-99 262.3333,-99 268,-104.6667 268,-110.3333 268,-110.3333 268,-121.6667 268,-121.6667 268,-127.3333 262.3333,-133 256.6667,-133 256.6667,-133 225.3333,-133 225.3333,-133 219.6667,-133 214,-127.3333 214,-121.6667 214,-121.6667 214,-110.3333 214,-110.3333 214,-104.6667 219.6667,-99 225.3333,-99"/>
+</g>
+<!-- ROLLHOLD&#45;&gt;TEST -->
+<g id="edge6" class="edge transition">
+<title>ROLLHOLD&#45;&gt;TEST</title>
+<path fill="none" stroke="#000000" d="M113.3969,-179.8015C140.2405,-166.3797 176.6444,-148.1778 203.6994,-134.6503"/>
+<polygon fill="#000000" stroke="#000000" points="205.4692,-137.6786 212.8482,-130.0759 202.3386,-131.4176 205.4692,-137.6786"/>
+<text text-anchor="start" x="169" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">HOLD = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- TEST&#45;&gt;BEGINNING -->
+<g id="edge10" class="edge transition">
+<title>TEST&#45;&gt;BEGINNING</title>
+<path fill="none" stroke="#000000" d="M241,-134.3688C241,-141.4426 241,-149.5972 241,-157 241,-253.5 241,-253.5 241,-253.5 241,-274.9081 256.9666,-353.9949 251,-380 248.0959,-392.6575 242.3446,-405.7184 236.5762,-416.7143"/>
+<polygon fill="#000000" stroke="#000000" points="233.3388,-415.337 231.5737,-425.7837 239.4682,-418.7179 233.3388,-415.337"/>
+<text text-anchor="start" x="245" y="-277" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (WN = &#39;1&#39;) &#160;&#160;</text>
+</g>
+<!-- WIN -->
+<g id="node8" class="node state regular">
+<title>WIN</title>
+<polygon fill="#ffffff" fill-opacity="0.003922" stroke="transparent" stroke-width="2" points="292,-52 236,-52 236,-16 292,-16 292,-52"/>
+<text text-anchor="start" x="252.3378" y="-30.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">WIN</text>
+<path fill="none" stroke="#000000" stroke-width="2" d="M248.3333,-17C248.3333,-17 279.6667,-17 279.6667,-17 285.3333,-17 291,-22.6667 291,-28.3333 291,-28.3333 291,-39.6667 291,-39.6667 291,-45.3333 285.3333,-51 279.6667,-51 279.6667,-51 248.3333,-51 248.3333,-51 242.6667,-51 237,-45.3333 237,-39.6667 237,-39.6667 237,-28.3333 237,-28.3333 237,-22.6667 242.6667,-17 248.3333,-17"/>
+</g>
+<!-- TEST&#45;&gt;WIN -->
+<g id="edge9" class="edge transition">
+<title>TEST&#45;&gt;WIN</title>
+<path fill="none" stroke="#000000" d="M246.1044,-97.8015C249.0524,-87.2915 252.8225,-73.8503 256.1414,-62.0177"/>
+<polygon fill="#000000" stroke="#000000" points="259.579,-62.7213 258.9098,-52.1476 252.8391,-60.8308 259.579,-62.7213"/>
+<text text-anchor="start" x="254" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">WN = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- WIN&#45;&gt;INITIAL -->
+<g id="edge11" class="edge transition">
+<title>WIN&#45;&gt;INITIAL</title>
+<path fill="none" stroke="#000000" d="M292.2941,-40.9851C319.0074,-48.4307 355,-61.0509 355,-75 355,-485 355,-485 355,-485 355,-489.9805 353.5265,-494.7382 351.222,-499.1334"/>
+<polygon fill="#000000" stroke="#000000" points="348.204,-497.3494 345.5305,-507.6014 354.0137,-501.2542 348.204,-497.3494"/>
+<text text-anchor="start" x="355" y="-277" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">NEWGAME = &#39;1&#39; &#160;&#160;</text>
+</g>
+<!-- WIN&#45;&gt;WIN -->
+<g id="edge12" class="edge transition">
+<title>WIN&#45;&gt;WIN</title>
+<path fill="none" stroke="#000000" d="M292.0183,-38.8247C303.888,-39.1883 314,-37.5801 314,-34 314,-31.5387 309.2205,-30.0094 302.3762,-29.4121"/>
+<polygon fill="#000000" stroke="#000000" points="302.0957,-25.9049 292.0183,-29.1753 301.9356,-32.903 302.0957,-25.9049"/>
+<text text-anchor="start" x="314" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">not (NEWGAME = &#39;1&#39;) &#160;&#160;</text>
+</g>
+</g>
+</svg>
+</div></div>
+        <br><br><br><br><br><br>
+    </article class="markdown-body">
+    </body>
+    
