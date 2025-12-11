@@ -23,7 +23,7 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.std_logic_unsigned.all;
 
 
-entity seven_segment_driver is
+entity segment_driver is
     generic (
       size : integer := 20 --! size of the counter 2^20 max
     );
@@ -37,9 +37,9 @@ entity seven_segment_driver is
       CA     : out std_logic_vector(7 downto 0); --! Cathodes
       AN     : out std_logic_vector( 3 downto 0 ) --! Anodes
     );
-end entity seven_segment_driver;
+end entity segment_driver;
 
-architecture Behavioral of seven_segment_driver is
+architecture Behavioral of segment_driver is
 
         -- We will use a counter to derive the frequency for the displays
         -- Clock is 100 MHz, we use 3 bits to address the display, so we count every
