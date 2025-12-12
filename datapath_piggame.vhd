@@ -58,7 +58,6 @@ constant frontbits : std_logic_vector(3 downto 0) := (others => '0'); --! bits t
 signal TR1 : std_logic_vector(6 downto 0) := (others =>'0'); --! Register TR1
 signal TR2 : std_logic_vector(6 downto 0) := (others =>'0'); --! Register TR2
 signal SUR : std_logic_vector(6 downto 0) := (others =>'0'); --! Register SUR
-signal DIE : std_logic_vector(2 downto 0); --! Register DIE register
 signal D   : std_logic_vector(6 downto 0) := (others =>'0'); --! Register D
 signal bcd1 : std_logic_vector(3 downto 0):= (others =>'0'); --! result of conversion of TR1 in bcd
 signal bcd2 : std_logic_vector(3 downto 0):= (others =>'0'); --! result of conversion of TR1 in bcd
@@ -93,10 +92,13 @@ inst_bin2BCD2 : binbcd
     digit0 => bcd3, --resulting BCD number- for TR2
     digit1 => bcd4);
 --------------------------------
-Main_process : process(clock,reset) begin
+Main_process : process(clock,reset)
+variable DIE : std_logic_vector(2 downto 0); --! Register DIE register
+
+ begin
     if reset = '1' then
         -- reset
-        DIE <= (others => '0'); --! asynchronous reset
+        DIE := (others => '0'); --! asynchronous reset
     else
         if rising_edge(clock) then
             if RST1 = '1' then
@@ -116,10 +118,11 @@ Main_process : process(clock,reset) begin
             end if;
             if ENADIE = '1' then
                 case DIE is
-                    when "110" => DIE <= "001";
-                    when others => DIE <= DIE +1;
+                    when "110" => DIE := "001";
+                    when others => DIE := DIE +1;
                 end case;
             end if;
+            
             if DIE ="001" then
                 DIE1 <= '1';
             else 
